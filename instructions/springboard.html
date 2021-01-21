@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Browser -->
+        <title>Springboard Collection Instructions | Adrodex</title>
+        <link rel="icon" type="image/png" href="../content/images/favicon.png">
+        
+        <!-- JS -->
+        <script src="../js/index.js"></script>
+        <script src="../js/instructions.js"></script>
+        
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/instructions.css">
+        <link rel="stylesheet" href="../css/themes/default.css">
+    </head>
+
+    <body onload="loadPage()">
+
+        <!-- Nav -->
+        <nav class="nav" id="nav">
+            <img class="nav-logo" src="../content/images/favicon.png">            
+            <div class="nav-buttons">
+                <a class="button" href="../index.html">Home</a>
+                <a class="button" href="../springboard.html">Springboard</a>
+            </div>
+            <a class="button icon mobile">
+                <span class="material-icons-round" href="javascript:void(0);" onclick="openNav()">drag_handle</span>
+            </a>
+        </nav> 
+        
+        <!-- Full-Page Nav -->
+        <div id="fullPageNav" class="full-page-nav">
+            <a class="button icon">
+                    <span class="material-icons-round" href="javascript:void(0);" onclick="closeNav()">close</span>
+                </a>
+            
+            <div id="navContent" class="nav-content">
+                <a class="button" href="../index.html">Home</a>
+                <a class="button" href="../springboard.html">Springboard</a>
+            </div>
+        </div>
+
+        <!-- Instructions Content -->
+        <main class="page-content">
+
+            <!-- Overview -->
+            <div class="section-card" id="step-overview">
+                <h2>Installation</h2>
+                <div class="segmented-control">
+                    <button class="segment" onclick="changePlatform('macOS', 0)">macOS</button>
+                    <span class="sep"></span>
+                    <button class="segment" onclick="changePlatform('iOS', 1)">iOS</button>
+                    <span class="sep"></span>
+                    <button class="segment disabled">Windows</button>
+                </div>
+
+                <ul id="step-info">
+                </ul>
+            </div>
+            
+            <!-- Step Description -->
+            <div class="section-text" id="step-desc">
+                <div class="titles">
+                    <h4>[Step #]</h4>
+                    <h2>[Step Title]</h2>
+                </div>
+                <ol>
+                </ol>
+                <div class="buttons">
+                    <button class="button" id="button-prev" onclick="changeStep(-1)">Prev</button>
+                    <button class="button" id="button-next" onclick="changeStep(1)">Next</button>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="section-image">
+                <img id="step-image" src="../../content/images/placeholders/placeholder-phone.png">
+            </div>
+            
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-text">
+                <a href="https://isaacshea.com/legal.html" target="_blank">Privacy & Legal</a>
+                <img class="footer-logo" src="../content/images/favicon.png">
+                <img class="footer-logo" src="../content/images/isaacshea.png">
+                <p>© Isaac Shea, 2021</p>
+            </div>
+        </footer>
+
+    </body>
+</html>

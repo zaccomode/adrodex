@@ -1,0 +1,290 @@
+/* SCROLLBAR MODIFIERS */
+.section-scrollview::-webkit-scrollbar {
+    width: 0px;
+    height: 8px;
+}
+
+.section-scrollview::-webkit-scrollbar-track {
+    background: none;
+    margin: 0px 10px;
+}
+
+.section-scrollview::-webkit-scrollbar-thumb {
+    background-color: var(--tertiaryGlass2);
+    border-radius: 5px;
+}
+
+.section-scrollview::-webkit-scrollbar-thumb:hover {
+    background-color: var(--tertiaryGlass3);
+}
+
+
+/* PAGE SECTION MODIFIERS */
+
+.risen-section {
+    position: absolute;
+    top: 30%;
+    left: 0px;
+    right: 0px;
+    
+    width: 100%;
+    padding: 0px 250px;
+    box-sizing: border-box;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.risen-behind {
+    height: 100%;
+}
+
+.risen-section > .page-section {
+    width: 100%;
+    
+}
+
+.section-card, .section-scrollview {
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Card Section */
+.section-card {
+    align-items: flex-start;
+    text-align: left;
+    
+    width: 25%;
+    min-width: 300px;
+    padding: 30px;
+    box-sizing: border-box;
+    
+    background-color: var(--primary);
+    border-radius: 5px;
+}
+
+.page-section.alt > .section-card {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.section-card > h4 {
+    margin-bottom: 0px;
+}
+
+.section-card > h2 {
+    font-size: 45px;
+    margin: 0px;
+}
+
+.section-card > p {
+    color: var(--tertiaryGlass3);
+}
+
+.section-card > .button {
+    margin: 10px 0px;
+}
+
+
+/* Scrollview Section */
+.section-scrollview {
+    overflow-x: scroll;
+    
+    width: 75%;
+}
+
+.scrollview-content {
+    height: 580px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Info Section */
+.page-section.info {
+    padding: 10px 0px;
+    margin: 10px 0px;
+    
+    background-color: var(--tertiaryGlass1);
+    border-radius: 5px;
+}
+
+.section-title, .page-section.info > .section-text {
+    padding: 30px;
+    height: auto;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.section-title {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.section-title > h2 {
+    font-size: 35px;
+    text-align: right;
+    margin: 0px;
+}
+
+.section-text > h3 {
+    color: var(--tertiary);
+    font-size: 22px;
+    font-weight: bold;
+
+    margin-bottom: 0px;
+}
+
+.section-text > ul {
+    color: var(--tertiaryGlass3);
+    margin: 0px;
+}
+
+.section-text > ul > li {
+    margin: 10px;
+}
+
+
+/* CARDS */
+.scroll-card {
+    height: 500px;
+    width: 340px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: var(--primaryLight1);
+    border-radius: 5px;
+    
+    margin: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+    
+    text-align: center;
+}
+.scroll-card.primary {
+    height: 550px;
+    width: 360px;
+    
+    padding: 40px;
+    
+    background-color: var(--primaryLight2);
+}
+
+.card-top {
+    height: 50%;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-top > img {
+    height: 100%;
+    width: auto;
+}
+
+.card-bottom {
+    height: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-bottom > h2 {
+    font-size: 35px;
+    margin: 0px;
+}
+
+.card-bottom > p {
+    font-size: 16px;
+    color: var(--tertiaryGlass3);
+    margin: 0px;
+}
+
+.card-bottom > .button {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0px 0px 0px;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1400px) {
+    .section-card > h2 {
+        font-size: 35px;
+    }
+    
+    .section-title > h2 {
+        font-size: 30px;
+    }
+    
+    .card-bottom > h2 {
+        font-size: 30px;
+    } 
+    
+    .section-card, .section-scrollview {
+        width: 50%;
+    }
+    
+    .scrollview-content {
+        margin: 0px 40px;
+    }
+    
+    .scroll-card {
+        min-width: 25%;
+    }
+    
+    .risen-section {
+        padding: 0px 75px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .page-section.scrollview {
+        flex-direction: column;
+    }  
+    
+    .section-card, .section-scrollview {
+        width: 100%;
+    }
+    
+    .risen-behind {
+        min-height: 500px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .section-title, .page-section.info > .section-text {
+        height: auto;
+        width: 100%;
+        text-align: center;
+        padding: 20px 40px;
+    }
+    
+    .section-title {
+        align-items: center;
+        justify-content: center;
+        
+        padding: 40px 40px 0px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .risen-section {
+        padding: 0px 25px;
+    }
+}

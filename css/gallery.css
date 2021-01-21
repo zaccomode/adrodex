@@ -1,0 +1,72 @@
+/* PAGE SECTION MODIFIERS */
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gallery-slide {
+    box-sizing: border-box;
+    margin: 10px;
+    
+    width: 200px;
+    height: 200px;
+    
+    background-color: var(--primaryLight1);
+    border-radius: 5px;
+    
+    overflow: hidden;
+    
+    transition-duration: 0.2s;
+    text-decoration: none;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery-slide:hover {
+    background-color: var(--primaryLight2);
+}
+
+.gallery-slide > img {
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    
+    flex: none;
+}
+
+.gallery-slide > .overlay {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    flex: none;
+    margin-left: -100%;
+    
+    padding: 0px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: var(--primaryLight2);
+    opacity: 0;
+    
+    transition-duration: 0.2s;
+}
+.gallery-slide > .overlay:hover {
+    opacity: 100%;
+}
+
+.gallery-slide > .overlay > h2 {
+    font-size: 30px;
+    margin: 0px;
+}
+
+.gallery-slide > .overlay > h4 {
+    margin: 0px;
+}

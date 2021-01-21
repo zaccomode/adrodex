@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Browser -->
+        <title>Checkout | Adrodex</title>
+        <link rel="icon" type="image/png" href="./content/images/favicon.png">
+        
+        <!-- JS -->
+        <script src="./js/index.js"></script>
+        <script src="./js/checkout.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
+        
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/checkout.css">
+        <link rel="stylesheet" href="./css/themes/default.css">
+    </head>
+
+    <body onload="loadPage()">
+        <!-- Nav -->
+        <nav class="nav" id="nav">
+            <img class="nav-logo" src="./content/images/favicon.png">            
+            <div class="nav-buttons">
+                <a class="button" href="./index.html">Home</a>
+                <a class="button" href="./springboard.html">Springboard</a>
+            </div>
+            <a class="button icon mobile">
+                <span class="material-icons-round" href="javascript:void(0);" onclick="openNav()">drag_handle</span>
+            </a>
+        </nav> 
+        
+        <!-- Full-Page Nav -->
+        <div id="fullPageNav" class="full-page-nav">
+            <a class="button icon">
+                    <span class="material-icons-round" href="javascript:void(0);" onclick="closeNav()">close</span>
+                </a>
+            
+            <div id="navContent" class="nav-content">
+                <a class="button" href="./index.html">Home</a>
+                <a class="button" href="./springboard.html">Springboard</a>
+            </div>
+        </div>
+        
+        <!-- Valid Content -->
+        <main class="page-content" id="checkoutInvalid">
+                
+            <!-- Checkout Description -->
+            <div class="section-text purchase">
+                <h4>404: Invalid Request</h4>
+                <h2>This is weird.</h2>
+                <p>
+                    It looks like you've requested a page that doesn't exist.
+                    <br>
+                    <b>If you think this page should exist but doesn't, let us know!</b>
+                </p>
+                <a class="button" href="./index.html">Keep Exploring</a>
+            </div>
+
+        </main>
+
+        <!-- Valid Content -->
+        <main class="page-content" id="checkoutValid" style="display: none;">
+
+            <!-- Description -->
+            <div class="section-text" id="pack-desc">
+                <h4>[Collection Name]</h4>
+                <h2>[Pack Name]</h2>
+                <p>
+                    [Pack description]
+                </p>
+                <a class="button" href="./neon/gallery.html">Icon Gallery</a>
+            </div>
+
+            <!-- Image -->
+            <div class="section-image" id="pack-image">
+                <img src="../../content/images/placeholders/placeholder-phone.png">
+            </div>
+
+            <!-- Information -->
+            <div class="section-card" id="pack-info">
+                <h2>What's Included</h2>
+                <ul class="border">
+                    <li>[List content here]</li>
+                    <li>[List content here]</li>
+                </ul>
+                <h2 class="info">Important Information</h2>
+                <ul>
+                    <li>This pack has not been designed for or tested on Android devices</li>
+                    <li>You are not permitted to re-distribute your purchase</li>
+                    <li>Any future additions to this purchase will not be granted without another transaction</li>
+                </ul>
+                <p><b>Our ToS and other legal information is available at <a href="https://isaacshea.com/legal.html" target="_blank">isaacshea.com/legal</a>.</b></p>
+                <button class="button secondary" id="checkout-button">Checkout</button>
+                <a class="button secondary" id="free-button" href="./redeem.html?sessionid=cs_test_0">Checkout Free</a>
+
+                <script type="text/javascript">
+                    var stripe = Stripe('pk_test_Ri8bTiuoM2NfXFktYBwCg47Z00EnTVbH9y');
+                    var checkoutButton = document.getElementById('checkout-button');
+
+                    checkoutButton.addEventListener('click', function() {
+                        // Fetch URL Information
+                        const queryString = window.location.search;
+                        const urlParams = new URLSearchParams(queryString);
+
+                        // Check if this is a free pack
+                        if (urlParams.get('id') != "0") {
+
+                            // Create a new Checkout Session using the server-side endpoint
+                            fetch('https://adrodex-main.herokuapp.com/create-checkout-session?collection=springboard&packid=' + urlParams.get('id'), {
+                                method: 'POST',
+                            })
+                            .then(function(response) {
+                                return response.json();
+                            })
+                            .then(function(session) {
+                                return stripe.redirectToCheckout({ sessionId: session.id });
+                            })
+                                .then(function(result) {
+                                if (result.error) {
+                                    alert(result.error.message);
+                                }
+                            })
+                            .catch(function(error) {
+                                console.error(error);
+                            });
+                            
+                            console.log(session);
+                        }
+                    });
+                </script>
+            </div>
+            
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-text">
+                <a href="https://isaacshea.com/legal.html" target="_blank">Privacy & Legal</a>
+                <img class="footer-logo" src="./content/images/favicon.png">
+                <img class="footer-logo" src="./content/images/isaacshea.png">
+                <p>© Isaac Shea, 2021</p>
+            </div>
+        </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,16 @@
+:root {
+    --primary: #323B45;
+    --primaryGlass1: #323B4526;
+    --primaryGlass2: #323B4580;
+    --primaryLight1: #3C454E;
+    --primaryLight2: #505860;
+    
+    --secondary: #5FAEB6;
+    --secondaryDark: #51949B;
+    --secondaryGlass: #5FAEB626;
+    
+    --tertiary: #FFFFFF;
+    --tertiaryGlass1: #FFFFFF13;
+    --tertiaryGlass2: #FFFFFF26;
+    --tertiaryGlass3: #FFFFFF80;
+}

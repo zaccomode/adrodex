@@ -1,0 +1,182 @@
+/* MAIN CONTENT MODIFIERS */
+.page-content {
+    height: 100%;
+    
+    background: url(../content/images/site-background-light.png);
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ELEMENT MODIFIERS */
+li.active {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+/* SECTION MODIFIERS */
+.section-text {
+    width: 33%;
+    min-height: 600px;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    justify-content: space-between;
+}
+
+.section-text.purchase {
+    width: 40%;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section-image {
+    width: 33%;
+}
+
+.section-image > img {
+    max-height: 600px;
+    width: 100%;
+}
+
+.section-text > .titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.section-text > .titles > h4 {
+    margin: 0px;
+}
+
+.section-text > .titles > h2 {
+    color: var(--secondary);
+    margin: 0px;
+}
+
+.section-text > p, .section-text > ol {
+    color: var(--primaryLight1);
+    padding: 20px;
+    margin: 0px;
+}
+
+.section-text > ol > li {
+    margin: 20px;
+}
+
+.section-text > .buttons {
+    width: 100%;
+}
+
+.section-text > .buttons > .button {
+    background-color: var(--primaryGlass1);
+
+    width: 50%;
+}
+
+.section-text > .buttons > .button:hover {
+    background-color: var(--primary);
+    color: var(--tertiary);
+}
+
+/* Card */
+.section-card {
+    background-color: var(--primary);
+    border-radius: 5px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    padding: 30px;
+    box-sizing: border-box;
+    
+    width: 30%;
+    min-height: 600px;
+}
+
+.section-card > h2 {
+    font-size: 40px;
+    margin: 0px;
+}
+
+.section-card > h2.info {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.section-card > ul, .section-card > p {
+    color: var(--tertiaryGlass3);
+    text-decoration: none;
+    
+    padding: 20px;
+    margin: 0px;
+
+    flex-grow: 1;
+    line-height: 200%;
+}
+
+p > b > a {
+    color: var(--tertiaryGlass3);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* MEDIA QUERIES */
+@media (prefers-color-scheme: dark) {
+    .page-content {
+        background: url(../content/images/site-background-dark.png);
+    }
+
+    .section-text > p, .section-text > ol {
+        color: var(--tertiaryGlass3);
+    }
+
+    .section-text > .buttons > .button {
+        background-color: var(--tertiaryGlass2);
+        color: var(--tertiary);
+    }
+    
+    .section-text > .buttons > .button:hover {
+        background-color: var(--tertiary);
+        color: var(--primary);
+    }
+
+    .section-card {
+        background-color: var(--primaryLight1);
+    }
+}
+
+@media screen and (max-width: 1400px) {
+
+    .page-content {
+        flex-direction: column;
+        height: auto;
+        padding: 100px;
+    }
+
+    .section-text, .section-card, .section-image {
+        width: 100%;
+        height: auto;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-image > img {
+        height: auto;
+        width: auto;
+    }
+
+}

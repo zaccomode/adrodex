@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Browser -->
+        <title>Redeem Order | Adrodex</title>
+        <link rel="icon" type="image/png" href="./content/images/favicon.png">
+        
+        <!-- JS -->
+        <script src="./js/index.js"></script>
+        <script src = "./js/redeem.js"></script>
+        
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/checkout.css">
+        <link rel="stylesheet" href="./css/themes/default.css">
+    </head>
+    
+    <body onload="loadPage()">
+        <!-- Nav -->
+        <nav class="nav" id="nav">
+            <img class="nav-logo" src="././content/images/favicon.png">            
+            <div class="nav-buttons">
+                <a class="button" href="./index.html">Home</a>
+                <a class="button" href="./springboard.html">Springboard</a>
+            </div>
+            <a class="button icon mobile">
+                <span class="material-icons-round" href="javascript:void(0);" onclick="openNav()">drag_handle</span>
+            </a>
+        </nav> 
+        
+        <!-- Full-Page Nav -->
+        <div id="fullPageNav" class="full-page-nav">
+            <a class="button icon">
+                    <span class="material-icons-round" href="javascript:void(0);" onclick="closeNav()">close</span>
+                </a>
+            
+            <div id="navContent" class="nav-content">
+                <a class="button" href="./index.html">Home</a>
+                <a class="button" href="./springboard.html">Springboard</a>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <main class="page-content">
+            
+            <!-- Checkout Description -->
+            <div class="section-text purchase">
+                <h2>Redeem Your Order.</h2>
+                <p>
+                    Download your order now, and check the instructions for installation information and tips.
+                </p>
+                <div class="buttons">
+                    <a class="button secondary" id="downloadButton" target="_blank">Download Now</a>
+
+                    <a class="button" href="./instructions/springboard.html" target="_blank">Instructions</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-text">
+                <a href="https://isaacshea.com/legal.html" target="_blank">Privacy & Legal</a>
+                <img class="footer-logo" src="./content/images/favicon.png">
+                <img class="footer-logo" src="./content/images/isaacshea.png">
+                <p>© Isaac Shea, 2021</p>
+            </div>
+        </footer>
+
+    </body>
+</html>

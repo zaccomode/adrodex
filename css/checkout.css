@@ -1,0 +1,116 @@
+/* MAIN CONTENT MODIFIERS */
+.page-content {
+    height: 100%;
+    
+    background: url(../content/images/site-background-light.png);
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SECTION MODIFIERS */
+.section-text {
+    width: 26%;
+}
+
+.section-text.purchase {
+    width: 40%;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section-image.checkout {
+    width: 40%;
+}
+
+.section-text > h2 {
+    color: var(--secondary);
+}
+
+.section-text > p {
+    color: var(--primaryLight1);
+}
+
+.section-text > .button {
+    background-color: var(--primaryGlass1);
+}
+
+.section-text > .button:hover {
+    background-color: var(--primary);
+    color: var(--tertiary);
+}
+
+/* Card */
+.section-card {
+    background-color: var(--primary);
+    border-radius: 5px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    padding: 30px;
+    box-sizing: border-box;
+    
+    width: 33%;
+    min-height: 600px
+}
+
+.section-card > h2 {
+    font-size: 40px;
+    margin: 0px;
+}
+
+.section-card > h2.info {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.section-card > ul, .section-card > p {
+    color: var(--tertiaryGlass3);
+    text-decoration: none;
+    
+    padding: 20px;
+    margin: 0px;
+}
+
+p > b > a {
+    color: var(--tertiaryGlass3);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* MEDIA QUERIES */
+@media (prefers-color-scheme: dark) {
+    .page-content {
+        background: url(../content/images/site-background-dark.png);
+    }
+
+    .section-text > p {
+        color: var(--tertiaryGlass3);
+    }
+
+    .section-text > .button {
+        background-color: var(--tertiaryGlass2);
+        color: var(--tertiary);
+    }
+    
+    .section-text > .button:hover {
+        background-color: var(--tertiary);
+        color: var(--primary);
+    }
+
+    .section-card {
+        background-color: var(--primaryLight1);
+    }
+}
