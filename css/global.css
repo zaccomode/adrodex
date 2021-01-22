@@ -609,6 +609,15 @@ a {
 }
 
 @media screen and (max-width: 800px) {
+    .header.hero {
+        height: 50%;
+        align-items: center;
+    }
+
+    .header-hero > .header-text {
+        height: 100%;
+    }
+    
     h1 {
         font-size: 7vw;
     }

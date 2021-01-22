@@ -10,6 +10,10 @@
     justify-content: center;
 }
 
+.page-content.redeem {
+    height: 100%;
+}
+
 /* SECTION MODIFIERS */
 .section-text {
     width: 26%;
@@ -57,7 +61,10 @@
     box-sizing: border-box;
     
     width: 33%;
-    min-height: 600px
+    min-height: 600px;
+    max-height: 700px;
+
+    overflow-y: scroll;
 }
 
 .section-card > h2 {
@@ -112,5 +119,32 @@ p > b > a {
 
     .section-card {
         background-color: var(--primaryLight1);
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .page-content {
+        flex-direction: column;
+        height: fit-content;
+
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .section-text, .section-image, .section-card {
+        width: 100%;
+    }
+
+    .section-image > img {
+        max-width: 100%;
+    }
+
+    .section-text {
+        text-align: center;
+        align-items: center;
+    }
+
+    .section-text.purchase {
+        width: 100%;
     }
 }
