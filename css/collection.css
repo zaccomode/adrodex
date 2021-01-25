@@ -61,6 +61,7 @@
     
     width: 25%;
     min-width: 300px;
+    height: fit-content;
     padding: 30px;
     box-sizing: border-box;
     
@@ -96,10 +97,15 @@
     overflow-x: scroll;
     
     width: 75%;
+    height: fit-content;
+    margin-right: 20px;
+    box-sizing: border-box;
 }
 
 .scrollview-content {
-    height: 580px;
+    min-height: 580px;
+    height: fit-content;
+    box-sizing: border-box;
     
     display: flex;
     flex-direction: row;
@@ -155,8 +161,7 @@
 
 /* CARDS */
 .scroll-card {
-    min-height: 500px;
-    height: fit-content;
+    height: 500px;
     width: 340px;
     
     display: flex;
@@ -261,6 +266,12 @@
     
     .section-card, .section-scrollview {
         width: 100%;
+        margin-right: 0px;
+    }
+
+    .scroll-card {
+        min-height: 500px;
+        height: fit-content;
     }
     
     .risen-behind {

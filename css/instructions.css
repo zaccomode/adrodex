@@ -174,9 +174,26 @@ p > b > a {
         align-items: center;
     }
 
+    .section-text {
+        order: 2;
+    }
+
+    .section-image {
+        order: 1;
+    }
+
+    .section-card {
+        order: 3;
+    }
+
     .section-image > img {
         height: auto;
         width: auto;
     }
+}
 
+@media screen and (max-width: 800px) {
+    .page-content {
+        padding: 100px 25px;
+    }
 }

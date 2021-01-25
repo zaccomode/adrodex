@@ -6,6 +6,20 @@ const DOMAIN = "https://adrodex-main.herokuapp.com";
 
 var xmlhttp = new XMLHttpRequest();
 
+// GET OS
+function iOS() {
+    return [
+      'iPad Simulator',
+      'iPhone Simulator',
+      'iPod Simulator',
+      'iPad',
+      'iPhone',
+      'iPod'
+    ].includes(navigator.platform)
+    // iPad on iOS 13 detection
+    || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+  }
+
 // GET INSTRUCTIONS
 function getInstruction() {
 
@@ -108,8 +122,13 @@ function updatePage(steps, activeStepInfo) {
 // LOAD PAGE
 function loadPage() {
 
+    if (iOS() == false) {
+        platform = "macOS";
+    } else {
+        platform = "iOS";
+    }
+
     getInstruction();
-    
 }
 
 // CHANGE STEP 

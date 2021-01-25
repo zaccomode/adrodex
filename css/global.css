@@ -102,7 +102,7 @@ a {
     text-align: center;
     
     background-color: none;
-    color: #323B45;
+    color: var(--primary);
     
     cursor: pointer;
     
@@ -250,6 +250,7 @@ a {
 
 .nav-buttons > .button {
     margin: 0px 5px;
+    
 }
 
 .nav-logo {
@@ -365,6 +366,16 @@ a {
     transition-duration: 0.5s;
 }
 
+.header-slide.clickable {
+    cursor: pointer;
+}
+
+.header-img {
+    max-width: 350px;
+    width: 75%;
+    height: auto;
+}
+
 .header-text {
     height: 100%;
     width: 100%;
@@ -383,11 +394,6 @@ a {
     margin: 0px;
 }
 
-.header-slide > img {
-    object-fit: cover;
-    opacity: 10%;
-}
-
 .header > .tickers {
     position: absolute;
     z-index: 998;
@@ -403,17 +409,20 @@ a {
     cursor: pointer;
     
     display: inline-block;
-    background-color: var(--primaryGlass1);
+    backdrop-filter: invert(20%);
+    -webkit-backdrop-filter: invert(20%);
     
     transition-duration: 0.2s;
     
     cursor: pointer;
 }
 .ticker:hover {
-    background-color: var(--primaryGlass2)
+    backdrop-filter: invert(50%);
+    -webkit-backdrop-filter: invert(50%);
 }
 .ticker.active {
-    background-color: var(--primary);
+    backdrop-filter: invert(75%);
+    -webkit-backdrop-filter: invert(75%);
 }
 
 .hero-overlay {
