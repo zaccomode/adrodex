@@ -133,6 +133,7 @@ p > b > a {
 
     .section-text, .section-image, .section-card {
         width: 100%;
+        max-height: none;
     }
 
     .section-image > img {
@@ -145,6 +146,14 @@ p > b > a {
     }
 
     .section-text.purchase {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons > .button {
         width: 100%;
     }
 }
