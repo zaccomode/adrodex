@@ -124,8 +124,10 @@ function loadPage() {
 
     if (iOS() == false) {
         platform = "macOS";
+        platformID = 0;
     } else {
         platform = "iOS";
+        platformID = 1;
     }
 
     getInstruction();
