@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Browser -->
-        <title>Adrodex | Hand-Made Digital Art</title>
+        <title>About | Adrodex</title>
         <link rel="icon" type="image/png" href="./content/images/favicon.png">
         
         <!-- JS -->
@@ -17,14 +17,15 @@
         
         <link rel="stylesheet" href="./css/global.css">
         <link rel="stylesheet" href="./css/themes/default.css">
+        <link rel="stylesheet" href="./css/information.css">
     </head>
-    
-    <body onload="loadPage()">
+
+    <body>
         <!-- Nav -->
         <nav class="nav" id="nav">
-            <img class="nav-logo" src="./content/images/favicon.png">            
+            <img class="nav-logo" src="./content/images/favicon.png">
             <div class="nav-buttons">
-                <a class="button active" href="./index.html">Home</a>
+                <a class="button" href="./index.html">Home</a>
                 <a class="button" href="./springboard.html">Springboard</a>
             </div>
             <a class="button icon mobile">
@@ -39,67 +40,78 @@
                 </a>
             
             <div id="navContent" class="nav-content">
-                <a class="button active" href="./index.html">Home</a>
+                <a class="button" href="./index.html">Home</a>
                 <a class="button" href="./springboard.html">Springboard</a>
             </div>
         </div>
-        
-        <!-- Header -->
-        <header class="header">
-            <!-- Tickers -->
-            <div class="tickers">
-                <span class="ticker active" onclick="currentSlide(1)"></span> 
-                <span class="ticker" onclick="currentSlide(2)"></span>
-            </div>
-            
-            <div class="slideshow-container" id="slideshow-container">
-                <!-- Default Slide -->
-                <div class="header-slide">
-                    <img class="header-img" src="./content/images/titles/adrodex-title.png" alt="Adrodex - By Isaac Shea">
-                </div>
 
-                <!-- Neon Collection Slide -->
-                <a class="header-slide clickable" href="./springboard.html">
-                    <img class="header-img" src="./content/images/titles/neon-collection-title.png" alt="The Neon Collection - Part of the Srpingboard Series">
-                </a>
-            </div>
+        <header class="header small">
+            <h1>About Us</h1>
         </header>
-        
+
         <!-- Content -->
         <main class="page-content">
-        
-            <!-- Springboard Series Content -->
+
+            <!-- Why We Exist -->
             <div class="page-section alt border">
                 <div class="section-text">
-                    <h4>New Arrivals</h4>
-                    <h2>Springboard Series</h2>
+                    <h2>Why we exist</h2>
                     <p>
-                        Bring new life to your phone's home screen with custom app icons.
+                        In a space and time dominated by e-commerce sites and digital merchandising, what sets us apart? 
+                        <br>
+                        <br>
+                        We exist to provide top-quality, design-based content for every customer. We do this by endorsing brilliant designers, striving for their best quality work, and manually checking and testing every product before it goes live on the store to rid every imperfection we can.
                     </p>
-                    <a class="button secondary" href="./springboard.html">See more</a>
                 </div>
                 <div class="section-image">
                     <img id="springboard-img" src="./content/images/placeholders/placeholder-phone.png">
                 </div>
             </div>
-            
-            <!-- Wallpaper Series Content -->
-            <div class="page-section">
+
+            <!-- We're Not Robots -->
+            <div class="page-section border">
                 <div class="section-text">
-                    <h4>Coming Soon</h4>
-                    <h2>Wallpaper Series</h2>
+                    <h2>We're not robots</h2>
                     <p>
-                        Beautiful desktop & mobile wallpapers hand-crafted for anyone's computer.
+                        We’re designers and developers, and we built this platform from the ground up for you. If you have suggestions, ideas, or queries, we’re open to contact through our social media accounts, or by emailing <a href="mailto:support@adrodex.com">support@adrodex.com</a>.
                     </p>
-                    <a class="button secondary disabled">See more</a>
                 </div>
                 <div class="section-image">
-                    <img id="wallpaper-img" src="./content/images/placeholders/placeholder-laptop.png">
+                    <img id="springboard-img" src="./content/images/placeholders/placeholder-laptop.png">
                 </div>
             </div>
-        
+
+            <!-- Join Us -->
+            <div class="page-section alt border">
+                <div class="section-text">
+                    <h2>Join Us</h2>
+                    <p>
+                        If you’re interested in developing and selling your own digital merchandise on Adrodex, we’d love to hear from you! Contact us through <a href="mailto:support@adrodex.com">support@adrodex.com</a> and we’ll see what you can do. If you have a relevant portfolio of work or a concept of your idea/s, show us! It will help your application.
+                    </p>
+                </div>
+                <div class="section-image">
+                    <img id="springboard-img" src="./content/images/placeholders/placeholder-phone.png">
+                </div>
+            </div>
+
+            <!-- Our Brand -->
+            <div class="page-section">
+                <div class="section-text">
+                    <h2>Our Brand</h2>
+                    <p>
+                        We take our brand, design and public image seriously, and we find it important to correctly and accurately represent what we do. To assist with this, we’ve developed a marketing package containing all the imagery and textual resources you need, plus a best practices guide to ensure our brand is shown in all the right ways.
+                        <br>
+                        <br>
+                        We kindly ask you to read through this before using our logo, typeface, or any other likeness in any work or promotion. Once you have done this, we’d love to see what you’ve made! Tag us on social media, or contact us at <a href="mailto:support@adrodex.com">support@adrodex.com</a>.
+                    </p>
+                    <a class="button secondary disabled">Coming Soon</a>
+                </div>
+                <div class="section-image">
+                    <img id="springboard-img" src="./content/images/placeholders/placeholder-laptop.png">
+                </div>
+            </div>
         </main>
-        
+
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-third">

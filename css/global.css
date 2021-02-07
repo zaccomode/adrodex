@@ -128,6 +128,16 @@ a {
     padding: 10px;
 }
 
+.button.social-icon {
+    padding: 12px 14px;
+    line-height: 0px;
+    margin: 5px;
+}
+
+.button.social-icon:hover {
+    background-color: var(--tertiaryGlass1);
+}
+
 .button.active {
     background-color: var(--primary);
     color: white;
@@ -487,7 +497,7 @@ a {
     margin: 0px;
 }
 
-.section-text > p {
+.section-text > p, .section-text > p > a {
     color: var(--tertiaryGlass3);
 }
 
@@ -507,27 +517,33 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-flow: wrap;
     
     background-color: var(--primaryLight1);
+
+    padding: 0px 250px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.footer-text {
+.footer-third {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
     
-    width: 100%;
+    width: 33%;
+
 }
 
-.footer-text > a, .footer-text > p {
+.footer-third > a, .footer-third > p {
     color: white;
     font-size: 15px;
     margin: 10px 30px;
 }
 
-.footer-text > .footer-logo {
+.footer-third > .footer-logo {
     width: 25px;
     height: 25px;
     
@@ -589,7 +605,7 @@ a {
         font-size: 16px;
     }
     
-    .page-content, .header-slide {
+    .page-content, .header-slide, .footer {
         padding: 0px 75px;
     }
 }
@@ -605,6 +621,7 @@ a {
     
     .section-text, .section-image, .page-section.alt > .section-text {
         align-items: center;
+        text-align: center;
         width: 100%;
         margin: 10px;
     }
@@ -631,7 +648,7 @@ a {
         font-size: 7vw;
     }
     
-    .page-content, .header-slide {
+    .page-content, .header-slide, .footer {
         padding: 0px 25px;
     }
     
@@ -641,5 +658,15 @@ a {
     
     .button.mobile {
         display: inherit;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-third {
+        width: 100%;
+        margin: 10px;
+        padding: 0px;
     }
 }

@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Browser -->
-        <title>Adrodex | Hand-Made Digital Art</title>
+        <title>Legal | Adrodex</title>
         <link rel="icon" type="image/png" href="./content/images/favicon.png">
         
         <!-- JS -->
@@ -17,14 +17,15 @@
         
         <link rel="stylesheet" href="./css/global.css">
         <link rel="stylesheet" href="./css/themes/default.css">
+        <link rel="stylesheet" href="./css/information.css">
     </head>
-    
-    <body onload="loadPage()">
+
+    <body>
         <!-- Nav -->
         <nav class="nav" id="nav">
-            <img class="nav-logo" src="./content/images/favicon.png">            
+            <img class="nav-logo" src="./content/images/favicon.png">
             <div class="nav-buttons">
-                <a class="button active" href="./index.html">Home</a>
+                <a class="button" href="./index.html">Home</a>
                 <a class="button" href="./springboard.html">Springboard</a>
             </div>
             <a class="button icon mobile">
@@ -39,67 +40,84 @@
                 </a>
             
             <div id="navContent" class="nav-content">
-                <a class="button active" href="./index.html">Home</a>
+                <a class="button" href="./index.html">Home</a>
                 <a class="button" href="./springboard.html">Springboard</a>
             </div>
         </div>
-        
-        <!-- Header -->
-        <header class="header">
-            <!-- Tickers -->
-            <div class="tickers">
-                <span class="ticker active" onclick="currentSlide(1)"></span> 
-                <span class="ticker" onclick="currentSlide(2)"></span>
-            </div>
-            
-            <div class="slideshow-container" id="slideshow-container">
-                <!-- Default Slide -->
-                <div class="header-slide">
-                    <img class="header-img" src="./content/images/titles/adrodex-title.png" alt="Adrodex - By Isaac Shea">
-                </div>
 
-                <!-- Neon Collection Slide -->
-                <a class="header-slide clickable" href="./springboard.html">
-                    <img class="header-img" src="./content/images/titles/neon-collection-title.png" alt="The Neon Collection - Part of the Srpingboard Series">
-                </a>
-            </div>
+        <header class="header small">
+            <h1>Legal & Regulatory</h1>
         </header>
-        
+
         <!-- Content -->
         <main class="page-content">
-        
-            <!-- Springboard Series Content -->
+
+            <!-- Our Documents Content -->
             <div class="page-section alt border">
                 <div class="section-text">
-                    <h4>New Arrivals</h4>
-                    <h2>Springboard Series</h2>
+                    <h2>Our Policies</h2>
                     <p>
-                        Bring new life to your phone's home screen with custom app icons.
+                        Information about our site, products & services written by us.
                     </p>
-                    <a class="button secondary" href="./springboard.html">See more</a>
                 </div>
-                <div class="section-image">
-                    <img id="springboard-img" src="./content/images/placeholders/placeholder-phone.png">
+
+                <div class="section-card">
+                    <div class="card-content">
+                        <!-- Privacy Policy -->
+                        <div class="card small">
+                            <h2>Privacy Policy</h2>
+                            <p>
+                                Information about the data we collect, why we do so, and what we do with it.
+                            </p>
+                            <a class="button tertiary" href="./content/docs/adrodex-privacy-policy.pdf" target="_blank">View</a>                    
+                        </div>
+
+                        <!-- Purchasing & Returns -->
+                        <div class="card small">
+                            <h2>Purchasing & Returns</h2>
+                            <p>
+                                Information about what you're purchasing, and what you're entitled to as a consumer.
+                            </p>
+                            <a class="button tertiary" href="./content/docs/adrodex-purchasing-and-returns-policy.pdf" target="_blank">View</a>                    
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Wallpaper Series Content -->
+
+            <!-- Our Documents Content -->
             <div class="page-section">
                 <div class="section-text">
-                    <h4>Coming Soon</h4>
-                    <h2>Wallpaper Series</h2>
+                    <h2>Further Reading</h2>
                     <p>
-                        Beautiful desktop & mobile wallpapers hand-crafted for anyone's computer.
+                        Third-party documents from legal and regulatory bodies we endorse.
                     </p>
-                    <a class="button secondary disabled">See more</a>
                 </div>
-                <div class="section-image">
-                    <img id="wallpaper-img" src="./content/images/placeholders/placeholder-laptop.png">
+
+                <div class="section-card">
+                    <div class="card-content">
+                        <!-- ACCC -->
+                        <div class="card small">
+                            <h2>ACCC</h2>
+                            <p>
+                                Information about your consumer rights, as detailed by the Australian Government.
+                            </p>
+                            <a class="button tertiary" href="https://www.accc.gov.au/consumers/consumer-rights-guarantees" target="_blank">Visit</a>                    
+                        </div>
+
+                        <!-- OAIC -->
+                        <div class="card small">
+                            <h2>OAIC</h2>
+                            <p>
+                                Information about the Australian Privacy Principles and what they mean to you.
+                            </p>
+                            <a class="button tertiary" href="https://www.oaic.gov.au/privacy/australian-privacy-principles/" target="_blank">Visit</a>                    
+                        </div>
+                    </div>
                 </div>
             </div>
-        
+
         </main>
-        
+
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-third">

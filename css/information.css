@@ -1,0 +1,99 @@
+/* SCROLLBAR MODIFIERS */
+.section-card::-webkit-scrollbar {
+    width: 0px;
+    height: 8px;
+}
+
+.section-card::-webkit-scrollbar-track {
+    background: none;
+    margin: 0px 10px;
+}
+
+.section-card::-webkit-scrollbar-thumb {
+    background-color: var(--tertiaryGlass2);
+    border-radius: 5px;
+}
+
+.section-card::-webkit-scrollbar-thumb:hover {
+    background-color: var(--tertiaryGlass3);
+}
+
+/* CARDS */
+.section-card {
+    width: 50%;
+
+    display: flex;
+    flex-direction: row;
+
+    overflow-x: scroll;
+    box-sizing: border-box;
+}
+
+.section-card > .card-content {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.card.small {
+    width: 300px;
+    height: 400px;
+    box-sizing: border-box;
+
+    background-color: var(--tertiaryGlass1);
+    border-radius: 5px;
+
+    padding: 25px;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card.small > h2 {
+    font-size: 40px;
+    text-align: center;
+    margin: 10px;
+}
+
+.card.small > p {
+    color: var(--tertiaryGlass3);
+    text-align: center;
+}
+
+.card.small > .button {
+    width: 100%;
+    box-sizing: border-box;
+
+    margin: 0px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1000px) {
+    .section-card {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-card > .card-content {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .section-card > .card-content {
+        flex-direction: column;
+    }
+
+    .card.small {
+        width: 100%;
+        height: auto;
+    }
+}
